@@ -234,7 +234,15 @@ button:focus {
     outline: 1px dotted;
     outline: 5px auto -webkit-focus-ring-color
 }
-
+.main_menu {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+  background-color: white;
+  opacity: 0.98;
+}
 button,
 input,
 optgroup,
@@ -4777,24 +4785,30 @@ h6 {
 ============================================================================================ */
 .about_area {
   position: relative; }
+  .about_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10%;
+  }
   .about_area .main_title {
-    margin-bottom: 0px; }
+    margin-bottom: 0px; 
+  width: 40%;
+  }
     .about_area .main_title p {
       margin-bottom: 20px; }
   .about_area .primary_btn {
     margin-top: 20px; }
   .about_area .about_img {
     position: relative;
-    right: 250px; }
+    right: 0px; }
     @media (max-width: 1480px) {
       .about_area .about_img {
         right: 0; }
         .about_area .about_img img {
           max-width: 100%;
           height: auto; } }
-    @media (max-width: 991px) {
-      .about_area .about_img {
-        display: none; } }
+
 
 /* End About Us Area css
 ============================================================================================ */
@@ -5223,7 +5237,49 @@ h6 {
     line-height: 45px; } }
 @media (max-width: 991px) {
   /* Main Menu Area css
+ 
   ============================================================================================ */
+  
+  .text-left {
+    text-align: center !important;
+}
+  .about_area .about_img {
+    /* display: none; */
+    margin-bottom: 40px;
+}
+  .about_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 15%;
+}
+.about_area .main_title {
+  margin-bottom: 0px;
+  width: 100%;
+}
+.primary_btn {
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 0px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 800 !important;
+  font-size: 14px;
+  line-height: 46px;
+  outline: none !important;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
+  border: double 2px transparent;
+  box-shadow: 0px 10px 30px rgb(118 85 225 / 30%);
+  display: flex !important;
+   margin-right: 0px !important; 
+  justify-content: center;
+}
   .navbar-toggler {
     border: none;
     border-radius: 0px;
