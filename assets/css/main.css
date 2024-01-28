@@ -5847,65 +5847,30 @@ h2.portfolio_title {
 }
 
 .project-container{
-  display: inline-block;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto auto;;
+  grid-row-gap: 0.5rem;
+  grid-column-gap: 0.5rem;
+  
 }
 
 .project-container-item{
   position: relative;
- 
-
-  width: 355px;
-  min-height: 355px;
+  width: fit-content;
   column-gap: 20px 20px;
-  display: inherit;
-
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
   border-radius: 0.4rem;
   margin: 30px 12px;
 }
 .project-container-item > img{
-  border-left: 12px solid #854feead;
-  border-bottom: 12px solid #854feead;
+  border-radius: 1.75rem;
   width: 100%;
   box-shadow: 6px 10px 38px #8080803d;
     position: relative;
 }
-.project-container-item-canvas {
-  position: absolute;
-  left: 12px;
-  background: #ac88f36b;
-  top: 0px;
-  right: 0px;
-  height: 369px;
-  
-  justify-content: center;
-  align-items: center;
-  /* bottom: 0; */
-  display: none;
-}
-.project-container-item:hover .project-container-item-canvas{
-  display: flex;
-}
 
-.project-container-item:hover .project-container-item-canvas > a{
-
-  animation-name: appear;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-
-}
-@keyframes appear {
-
-
-  to{  font-size: 17px;
-    transform: translate(0%, 0%);}
-}
-.project-container-item-canvas > a{
-  font-size: 0px;
-  transform: translate(-140%, -700%);
-}
 
 .project-container-item-info{
   margin-top: 1.5rem;
@@ -5924,6 +5889,46 @@ h2.portfolio_title {
   line-height: 1.75rem;
   font-style: italic;
 }
+
+.project-actions{
+  display: flex;
+  width: 100%;
+  margin-top: 5px;
+}
+.project-actions > a{
+  padding: 2px 7px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.url-cta-project{
+  background-color: #854fee;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.25em;
+  border-radius: 1.75rem;
+}
+.url-cta-project > img{
+  margin-right: 5px;
+}
+
+.github-cta-project{
+  background-color: black;
+  color: white !important;
+  text-transform: capitalize;
+  font-size: 1.25em;
+  border-radius: 1.75rem;
+  margin-right: 1rem;
+}
+.github-cta-project > img{
+  margin-right: 5px;
+}
+
+
 
 /* End Footer Area css
 ============================================================================================ */
